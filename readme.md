@@ -16,7 +16,7 @@
     vi /etc/yum.repos.d/nginx.repo
 ```
 
-修改文件内容为
+修改配置文件内容为
 ```
     [nginx]
     name=nginx repo
@@ -33,14 +33,16 @@
 ```
     cd /etc/nginx/conf.d/
     
-    vi default.conf     //查看配置文件
+    vi default.conf             //查看配置文件
 
-    cp default.conf ../
+    cp default.conf ../         //拷贝文件到上层目录
 
     cd conf.d/
 
-    vi default.conf
+    vi default.conf             //修改配置文件
 ```
+
+7. 下载node
 
 
 # nginx 一些基本命令
@@ -58,4 +60,6 @@
     ps -ef | grep nginx 搜索关于nginx的进程
 
     cd etc/nginx && cat nginx.conf 查看nginx配置文件
+
+    rm -rf .default.conf.swp 删除未保存的历史文件
 ```
